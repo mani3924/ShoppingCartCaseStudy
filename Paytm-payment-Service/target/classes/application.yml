@@ -1,0 +1,15 @@
+paytm.payment:
+  sandbox:
+    merchantId: ajOLlb58826750085257   
+    merchantKey: HKOH&sxzBFS67#gu
+    channelId: WEB
+    website: WEBSTAGING
+    industryTypeId: Retail
+    paytmUrl: https://securegw-stage.paytm.in/order/process      #from our application we will redirect to this url
+    callbackUrl: http://localhost:8088/pgresponse                 #after payment we will get back to this url
+    details:                                                      #now for all this details we will create a model class name paytm details
+      MID: ${paytm.payment.sandbox.merchantid}
+      CHANNEL_ID: ${paytm.payment.sandbox.channelid}
+      INDUSTRY_TYPE_ID: ${paytm.payment.sandbox.industrytypeid}
+      WEBSITE: ${paytm.payment.sandbox.website}
+      CALLBACK_URL: ${paytm.payment.sandbox.callbackUrl}
